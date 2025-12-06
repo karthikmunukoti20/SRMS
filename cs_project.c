@@ -34,8 +34,8 @@ void logAction(const char *action) {
 
 void welcomeBanner() {
     printf(COLOR_YELLOW "+--------------------------------------+\n");
-    printf("¦        STUDENT MANAGEMENT SYSTEM     ¦\n");
-    printf("¦              TEXT  EDITION           ¦\n");
+    printf("Â¦        STUDENT MANAGEMENT SYSTEM     Â¦\n");
+    printf("Â¦              TEXT  EDITION           Â¦\n");
     printf("+--------------------------------------+\n" COLOR_RESET);
     printf(COLOR_GREEN "System Ready! Please log in.\n\n" COLOR_RESET);
 }
@@ -334,7 +334,6 @@ void showHelp() {
     printf("  guest - read-only view/search/statistics/sort\n");
 }
 
-/* NEW: export students to a text report */
 void exportReport() {
     FILE *in = fopen(STUD_FILE, "r");
     if (!in) {
@@ -365,7 +364,6 @@ void exportReport() {
     printf(COLOR_GREEN "Report exported to %s\n" COLOR_RESET, REPORT_FILE);
 }
 
-/* NEW: show last N log entries */
 void showLogs(int lastN) {
     FILE *fp = fopen(LOG_FILE, "r");
     if (!fp) {
@@ -469,4 +467,5 @@ int main() {
     printf(COLOR_MAGENTA "\nThank you for using the system. Goodbye!\n" COLOR_RESET);
     return 0;
 }
+
 
